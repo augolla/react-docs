@@ -1,0 +1,20 @@
+Adding React To an existing HTML
+1.Add a div for a DOM in body i.e...the "root" div
+
+2.Add 3 script tags right blow the closing body tag
+...<!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+    <script src="root.js"></script>
+  </body>
+---The first 2 scripts load react.The next is for your js file
+
+3.Create a root.js file
+4.Add this code to it
+const domContainer = document.querySelector('#like_button_container');
+ReactDOM.render(e(LikeButton), domContainer);
+
+N/B---JUST USE create-react-app DUDE
