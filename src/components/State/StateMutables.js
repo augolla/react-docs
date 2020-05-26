@@ -23,7 +23,11 @@ class StateMutables extends Component{
   render(){
     return(
       <div>
-        {this.state.numsArray.map(numbers=><h3>{numbers}</h3>)}
+        {/*Adding key helps for when every number/data rendered is not/might not be unique
+        e.g If we had a remove functionality,if we tried to remove a number,
+        all numbers/data with that value would be removed.The key makes each rendering
+        unique*/}
+        {this.state.numsArray.map(numbers=><h3 key={numbers}>{numbers}</h3>)}
         <button onClick={this.addToArray}>Add Number</button>
       </div>
     )

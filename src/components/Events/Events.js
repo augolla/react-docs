@@ -1,12 +1,15 @@
 import React,{Component} from 'react'
 
 class Events extends Component {
-  constructor() {
-    super()
+  printSomething(){
+    console.log("Something?");
   }
   render(){
+    let num=0
     return(
-      <div></div>
+      <div>
+        <button onClick={this.printSomething}>Mimi</button>
+      </div>
     )
   }
 }
